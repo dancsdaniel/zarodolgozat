@@ -1,0 +1,12 @@
+.navbar{
+    background-color: lemonchiffon !important;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+li.nav-item{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#loggedin{
+    float: right;
+}
