@@ -12,12 +12,9 @@ include "navbar.php";
     <script src="js/jarmulista.js"></script>
 </head>
 <body>
-    <div class="row row-cols-1 row-cols-md-3 g-4" id="adatok">
+    <div class="row" id="adatok">
 
     </div>
-
-
-
     <?php include "footer.php"; ?>
 </body>
 </html>

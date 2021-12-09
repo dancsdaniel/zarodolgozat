@@ -11,4 +11,4 @@ if (!$conn) {
     die("Kapcsolódás sikertelen: " . mysqli_connect_error());
 }
 
-mysqli_set_charset($conn,"utf-8");
+mysqli_set_charset($conn,"utf8");
