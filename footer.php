@@ -1,6 +1,7 @@
 <?php
 include "belepes_ellenorzes.php";
 ?>
+
 <head>
     <link rel="stylesheet" href="css/footer.css">
 </head>

@@ -15,7 +15,7 @@ function tabla(adatok){
                     sz+='<li class="card-text">Teljesítmény: '+elem.autok_teljesitmeny+'</li>';
                     sz+='<li class="card-text">Férőhelyek: '+elem.autok_ferohely+'</li>';
                     sz+='<li class="card-text">Bérlés napidíja: '+elem.autok_dij+' kredit</li>';
-                    sz+='<a href="#" class="btn btn-success" style="display: block">Autó foglalása</a>';
+                    sz+='<a href="#" class="btn btn-success" style="position: absolute; right: 0; bottom: 0; margin: 10px;">Autó foglalása</a>';
                 sz+='</div>';
         sz+='</div>';
     }
