@@ -7,6 +7,6 @@ include "belepes_ellenorzes.php";
 </head>
 <footer class="footer mt-auto py-3 bg-light">
   <div class="container">
-    <span class="text-muted">Minden jog fenntartva © 2021</span>
+    <span class="text-muted">Minden jog fenntartva © 2021 Készítette: Dancs Dániel
   </div>
 </footer>
