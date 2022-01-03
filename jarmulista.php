@@ -11,6 +11,7 @@ include "navbar.php";
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Járműveink listája</title>
     <script src="js/jarmulista.js"></script>
+    <link rel="stylesheet" href="./css/jarmulista.css">
 </head>
 <body>
     <div class="row" id="adatok">

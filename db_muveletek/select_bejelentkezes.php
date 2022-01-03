@@ -7,10 +7,11 @@ $email = $_POST["login_email"];
 $jelszo = md5($_POST["login_jelszo"] . $kod);
 
 $sql = "SELECT * FROM felhasznalok WHERE felhasznalok_email = '$email' AND felhasznalok_jelszo = '$jelszo'";
+
 if (isset($conn)) {
     $eredmeny = mysqli_query($conn, $sql);
     $sorok = mysqli_num_rows($eredmeny);
-    if ($sorok>=1){
+    if ($sorok==1){
         while($row = mysqli_fetch_array($eredmeny)) {
             $_SESSION["id"] = $row['felhasznalok_id'];
             $_SESSION["teljesnev"] = $row['felhasznalok_teljesnev'];

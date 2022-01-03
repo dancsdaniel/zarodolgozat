@@ -25,15 +25,14 @@ include "belepes_ellenorzes.php";
                 <li class="nav-item">
                     <a class="nav-link" href="#">Járműkölcsönzés</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" style="display: <?php if(!$_SESSION["admin"]==1) echo "none";?>">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown link
+                        Admin
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Járműveink</a></li>
-                        <li><a class="dropdown-item" href="#">Jármű foglalása</a></li>
-                        <li><a class="dropdown-item" href="#">Még nem tudom</a></li>
-                        <li><a class="dropdown-item" href="#">Kapcsolat</a></li>
+                        <li><a class="dropdown-item" href="ujjarmu.php">Új jármű felvitele</a></li>
+                        <li><a class="dropdown-item" href="foglalasokkezelese.php">Foglalások kezelése</a></li>
+                        <li><a class="dropdown-item" href="adminkezeles.php">Adminisztrátorok kezelése</a></li>
                     </ul>
                 </li>
             </ul>

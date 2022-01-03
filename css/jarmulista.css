@@ -1,0 +1,32 @@
+body{
+    background-color: #f2c43d;
+}
+
+.card{
+    width:400px;
+    margin: 20px !important;
+    background-color: #a7ecf2;
+    box-shadow: #3e9cbf 10px 20px;
+    border-radius: 35px;
+    border: 1px solid black;
+}
+
+.card-img-top{
+    padding: 10px 10px 10px 10px;
+    border-radius: 25px;
+}
+
+.card-title{
+    text-align: center;
+    margin-top: -16px;
+}
+
+#adatok{
+    justify-content: space-evenly;
+}
+
+.btn{
+    margin: 10px;
+    border-radius: 20px;
+    display: block !important;
+}
