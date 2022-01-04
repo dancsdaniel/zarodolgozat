@@ -10,12 +10,8 @@ function tabla(adatok){
         sz+='<p>';
         sz+=''+elem.felhasznalok_teljesnev+'';
         sz+=''+elem.felhasznalok_email+'';
-        sz+='<button type="button" class="btn btn-outline-danger btn-sm" style="width: 100px;" onclick=torles("'+elem.felhasznalok_email+'")>Admin jog törlése</button>';
+        sz+='<a href="./db_muveletek/update_admintouser.php?email='+elem.felhasznalok_email+'"><button type="button" class="btn btn-outline-danger btn-sm" style="width: 100px;">Admin jog törlése</button></a>';
         sz+='</p>';
     }
     document.getElementById("adatok").innerHTML=sz;
-}
-
-torles=(nev)=>{
-    alert(nev);
 }

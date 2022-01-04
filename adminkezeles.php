@@ -18,6 +18,13 @@ else{
     </head>
     <body>
         <h1>Jelenlegi adminisztrátorok listája</h1>
+
+        <div class="input-group mb-3" style="width: 60%">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="E-Mail cím" aria-label="E-Mail cím" aria-describedby="basic-addon1" name="emailcim">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Felhasználó hozzáadása adminisztrátorként</button>
+        </div>
+
         <div class="row" id="adatok">
 
         </div>
