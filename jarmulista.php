@@ -14,9 +14,10 @@ include "navbar.php";
     <link rel="stylesheet" href="./css/jarmulista.css">
 </head>
 <body>
-    <div class="row" id="adatok">
+    <div class="row" id="adatok" style="margin-right: auto">
 
     </div>
+
     <?php include "footer.php"; ?>
 </body>
 </html>

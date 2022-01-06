@@ -14,19 +14,33 @@ else{
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="js/adminkezeles.js"></script>
+        <link rel="stylesheet" href="./css/adminkezeles.css">
         <title>Adminisztrátorok kezelése</title>
     </head>
     <body>
-        <h1>Jelenlegi adminisztrátorok listája</h1>
+        <div id="tartalom">
+        <h1>Adminisztrátorok kezelése</h1>
 
-        <div class="input-group mb-3" style="width: 60%">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="E-Mail cím" aria-label="E-Mail cím" aria-describedby="basic-addon1" name="emailcim">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Felhasználó hozzáadása adminisztrátorként</button>
+        <form action="./db_muveletek/update_usertoadmin.php" method="post">
+        <div class="input-group mb-3" id="bevitel">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="E-Mail cím" aria-label="E-Mail cím" aria-describedby="basic-addon1" name="emailcim">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Felhasználó hozzáadása adminisztrátorként</button>
         </div>
+        </form>
 
-        <div class="row" id="adatok">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <td>Teljes név</td>
+                        <td>E-Mail cím</td>
+                        <td>#</td>
+                    </tr>
+                </thead>
+                <tbody id="adatok">
 
+                </tbody>
+            </table>
         </div>
     </body>
     </html>

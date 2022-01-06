@@ -7,11 +7,17 @@ function tabla(adatok){
     let sz="";
 
     for (let elem of adatok) {
-        sz+='<p>';
+        sz+='<tr>';
+        sz+='<td>';
         sz+=''+elem.felhasznalok_teljesnev+'';
+        sz+='</td>';
+        sz+='<td>';
         sz+=''+elem.felhasznalok_email+'';
+        sz+='</td>';
+        sz+='<td>';
         sz+='<a href="./db_muveletek/update_admintouser.php?email='+elem.felhasznalok_email+'"><button type="button" class="btn btn-outline-danger btn-sm" style="width: 100px;">Admin jog törlése</button></a>';
-        sz+='</p>';
+        sz+='</td>';
+        sz+='</tr>';
     }
     document.getElementById("adatok").innerHTML=sz;
 }

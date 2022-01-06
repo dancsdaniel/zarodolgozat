@@ -27,7 +27,7 @@ include "belepes_ellenorzes.php";
                         Admin
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="ujjarmu.php">Új jármű felvitele</a></li>
+                        <li><a class="dropdown-item" href="jarmukezeles.php">Járművek kezelése</a></li>
                         <li><a class="dropdown-item" href="foglalasokkezelese.php">Foglalások kezelése</a></li>
                         <li><a class="dropdown-item" href="adminkezeles.php">Adminisztrátorok kezelése</a></li>
                     </ul>
@@ -35,7 +35,8 @@ include "belepes_ellenorzes.php";
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <span class="nav-link">Bejelentkezve mint: <?php echo $_SESSION["teljesnev"]; ?></span>
+                    <span class="nav-link">Bejelentkezve mint: <?php echo $_SESSION["teljesnev"]; ?>
+                                           Kredit: <?php echo $_SESSION["kredit"]; ?></span>
                     <a class="nav-link" href="kijelentkezes.php"> Kijelentkezés</a>
                 </li>
             </ul>
