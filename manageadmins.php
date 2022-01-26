@@ -1,6 +1,7 @@
 <?php
-include "belepes_ellenorzes.php";
-include "navbar.php";
+include "Includes/loginreq.inc.php";
+include "Includes/navbar.inc.php";
+
 if (!$_SESSION["admin"]==1){
     echo "Nincs hozzáférésed az admin felülethez, kérlek használj admin jogú felhasználót!";
 }
@@ -21,13 +22,22 @@ else{
         <div id="tartalom">
         <h1>Adminisztrátorok kezelése</h1>
 
-        <form action="./db_muveletek/update_usertoadmin.php" method="post">
+        <form method="post">
         <div class="input-group mb-3" id="bevitel">
                 <span class="input-group-text" id="basic-addon1">@</span>
-                <input type="text" class="form-control" placeholder="E-Mail cím" aria-label="E-Mail cím" aria-describedby="basic-addon1" name="emailcim">
-                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Felhasználó hozzáadása adminisztrátorként</button>
+                <input type="text" class="form-control" placeholder="E-Mail cím" aria-label="E-Mail cím" aria-describedby="basic-addon1" name="email">
+                <button class="btn btn-outline-secondary" type="submit" name="submit" id="button-addon2">Felhasználó hozzáadása adminisztrátorként</button>
         </div>
         </form>
+
+            <?php
+                if(isset($_POST["submit"]))
+                {
+                    $e = $_POST['email'];
+                    include "Controllers/UserController.php";
+                    toAdmin($e);
+                }
+            ?>
 
             <table class="table table-striped table-hover">
                 <thead>
@@ -46,5 +56,5 @@ else{
     </html>
     <?php
 }
-include "footer.php";
+include "footer.inc.php";
 ?>

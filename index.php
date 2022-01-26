@@ -1,5 +1,5 @@
 <?php
-include "belepes_ellenorzes.php";
+include "Includes/loginreq.inc.php";
 ?>
 
 <!doctype html>
@@ -12,7 +12,8 @@ include "belepes_ellenorzes.php";
     <title>Főoldal</title>
 </head>
 <body>
-    <?php include "navbar.php"; ?>
-    <?php include "footer.php"; ?>
+    <?php include "Includes/navbar.inc.php"; ?>
+        <h2>Üdvözöljük az oldalon</h2>
+    <?php include "Includes/footer.inc.php"; ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
-include "belepes_ellenorzes.php";
-include "navbar.php";
+include "loginreq.inc.php";
+include "navbar.inc.php";
 if (!$_SESSION["admin"]==1){
     echo "Nincs hozzáférésed az admin felülethez, kérlek használj admin jogú felhasználót!";
 }
@@ -21,5 +21,5 @@ else{
     </html>
     <?php
 }
-include "footer.php";
+include "footer.inc.php";
 ?>

@@ -1,4 +1,4 @@
-fetch("http://zarodolgozat.test/db_muveletek/select_adminok.php")
+fetch("routes.php?action=allAdmin")
     .then(x => x.json())
     .then(y => tabla(y));
 
@@ -9,13 +9,13 @@ function tabla(adatok){
     for (let elem of adatok) {
         sz+='<tr>';
         sz+='<td>';
-        sz+=''+elem.felhasznalok_teljesnev+'';
+        sz+=''+elem.users_fullname+'';
         sz+='</td>';
         sz+='<td>';
-        sz+=''+elem.felhasznalok_email+'';
+        sz+=''+elem.users_email+'';
         sz+='</td>';
         sz+='<td>';
-        sz+='<a href="./db_muveletek/update_admintouser.php?email='+elem.felhasznalok_email+'"><button type="button" class="btn btn-outline-danger btn-sm" style="width: 100px;">Admin jog törlése</button></a>';
+        sz+='<a href="routes.php?action=toUser&email='+elem.users_email+'"><button type="button" class="btn btn-outline-danger btn-sm" style="width: 100px;">Admin jog törlése</button></a>';
         sz+='</td>';
         sz+='</tr>';
     }

@@ -1,3 +1,7 @@
+<?php
+   include "Controllers/UserController.php";
+?>
+
 <!doctype html>
 <html lang="hu">
 <head>
@@ -25,14 +29,23 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="./db_muveletek/select_bejelentkezes.php">
+                <form method="POST">
 
-                    <p>E-mail: <input type="text" name="login_email" class="form-control"></p>
-                    <p>Jelszó: <input type="password" name="login_jelszo" class="form-control"></p>
+                    <p>E-mail: <input type="text" name="email" class="form-control"></p>
+                    <p>Jelszó: <input type="password" name="jelszo" class="form-control"></p>
 
-                    <input type="submit" class="btn btn-success" value="Bejelentkezés">
+                    <input type="submit" name="login" class="btn btn-success" value="Bejelentkezés">
 
                 </form>
+                <?php
+                    if(isset($_POST["login"]))
+                    {
+                        $e = $_POST['email'];
+                        $j = $_POST['jelszo'];
+
+                        findUser($e, $j);
+                    }
+                ?>
             </div>
         </div>
     </div>
@@ -49,16 +62,28 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="./db_muveletek/insert_regisztracio.php">
+                <form method="POST">
 
                     <p>Teljes név: <input type="text" name="reg_teljesnev" class="form-control"></p>
                     <p>E-mail: <input type="text" name="reg_email" class="form-control"></p>
                     <p>Jelszó: <input type="password" name="reg_jelszo1" class="form-control"></p>
                     <p>Jelszó újra: <input type="password" name="reg_jelszo2" class="form-control"></p>
 
-                    <input type="submit" class="btn btn-success" value="Regisztráció">
+                    <input type="submit" name="reg" class="btn btn-success" value="Regisztráció">
 
                 </form>
+                <?php
+                if(isset($_POST["reg"]))
+                {
+                    $t = $_POST['reg_teljesnev'];
+                    $e = $_POST['reg_email'];
+                    $pw1 = $_POST['reg_jelszo1'];
+                    $pw2 = $_POST['reg_jelszo2'];
+
+                    addUser($t, $e, $pw1, $pw2);
+                }
+                ?>
+
             </div>
         </div>
     </div>
