@@ -28,11 +28,11 @@ function modal(id, marka, tipus, gyartaseve, dij){
     document.getElementById("szamitottdij").innerHTML = null;
 
     let modaltest = '<p> Kölcsönzés kezdete: '
-    modaltest+= '<input type="date" class="form-control" id="start" name="kezdodatum" value="'+maiDatum()+'" min="'+maiDatum()+'">';
+    modaltest+= '<input type="date" class="form-control" id="start" name="from" value="'+maiDatum()+'" min="'+maiDatum()+'">';
     modaltest+= '<br>Kölcsönzés napjainak száma (maximum 14 nap): ';
-    modaltest+= '<input type="number" class="form-control" min="1" max="14" value="0" name="napok" id="napok" oninput="dijSzamolas(this.value, '+dij+')">';
-    modaltest+= '<input type="hidden" name="autoid" value="'+id+'">';
-    modaltest+= '<input type="hidden" name="autodij" value="'+dij+'">';
+    modaltest+= '<input type="number" class="form-control" min="1" max="14" value="0" name="days" id="napok" oninput="dijSzamolas(this.value, '+dij+')">';
+    modaltest+= '<input type="hidden" name="carid" value="'+id+'">';
+    modaltest+= '<input type="hidden" name="carprice" value="'+dij+'">';
 
     document.getElementById("modaltest").innerHTML=modaltest;
 }

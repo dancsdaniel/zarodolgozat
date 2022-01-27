@@ -41,7 +41,7 @@ function del(id){
     document.getElementById("id2").value=id;
 
     document.getElementById("inputs").style.display="none";
-    document.getElementById("warningmessage").innerHTML="Biztos benne?";
+    document.getElementById("warningmessage").innerHTML="Biztos benne?<br>Ebben az esetben a járműhöz kapcsolódó foglalások is törlődnek!<br>";
 
     document.getElementById("modalbutton").click();
 }

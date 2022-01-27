@@ -100,6 +100,8 @@
             echo "Nincs hozzáférésed az admin felülethez, kérlek használj admin jogú felhasználót!";
         }
         else{
+            $sql3 = "DELETE FROM reservations WHERE reservations_carid=$id";
+            mysqli_query($conn, $sql3);
             $sql2 = "SELECT cars_picture FROM cars WHERE cars_id=$id";
             $sql = "DELETE FROM cars WHERE cars_id='$id'";
             if (isset($conn)) {

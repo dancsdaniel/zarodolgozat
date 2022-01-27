@@ -1,6 +1,6 @@
 <?php
-include "loginreq.inc.php";
-include "navbar.inc.php";
+include "Includes/loginreq.inc.php";
+include "Includes/navbar.inc.php";
 if (!$_SESSION["admin"]==1){
     echo "Nincs hozzáférésed az admin felülethez, kérlek használj admin jogú felhasználót!";
 }

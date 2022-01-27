@@ -1,4 +1,0 @@
-GET http://zarodolgozat.test/routes.php?action=findCar&id=3
-Accept: application/json
-
-###

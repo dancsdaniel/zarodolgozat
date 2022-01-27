@@ -15,6 +15,22 @@ include "Includes/loginreq.inc.php";
     <link rel="stylesheet" href="./css/jarmulista.css">
 </head>
 <body>
+
+    <?php
+    if(isset($_POST["submit"]))
+    {
+        $userid = $_SESSION["id"];
+        $carid = $_POST["carid"];
+        $from = $_POST["from"];
+        $days = $_POST["days"];
+        $carprice = $_POST["carprice"];
+
+
+        include "Controllers/ReservationController.php";
+            echo addReservation($carid, $userid, $from, $days, $carprice);
+    }
+    ?>
+
     <div class="row" id="adatok" style="margin-right: auto">
 
     </div>
@@ -27,16 +43,15 @@ include "Includes/loginreq.inc.php";
                     <h5 class="modal-title" id="exampleModalLabel"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás"></button>
                 </div>
-                <form action="xdb_muveletek/insert_kolcsonzes.php" method="POST">
+                <form method="POST">
                     <div class="modal-body" id="modaltest">
 
                     </div>
                     <div class="modal-body" id="szamitottdij">
 
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Jármű kölcsönzése</button>
-                    </div>
+
+                        <button type="submit" name="submit" class="btn btn-primary">Jármű kölcsönzése</button>
                 </form>
             </div>
         </div>

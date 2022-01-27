@@ -1,6 +1,7 @@
 <?php
     include "Controllers/CarController.php";
     include "Controllers/UserController.php";
+    include "Controllers/MailController.php";
 
     #CarController
     if($_GET['action']=='allCar')
