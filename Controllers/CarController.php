@@ -52,7 +52,7 @@
 
             if(0!=filesize($_FILES['kep']['name'])){
                 $fajlnev = $id.'.'.pathinfo($_FILES['kep']['name'], PATHINFO_EXTENSION);
-                $cel = "kepek/".$fajlnev;
+                $cel = "pictures/".$fajlnev;
                 move_uploaded_file($_FILES['kep']['tmp_name'], $cel);
                 $sql = "UPDATE cars SET
                 cars_brand='$marka', cars_model='$tipus', cars_year=$gyartaseve, cars_power='$teljesitmeny',
@@ -108,7 +108,7 @@
                 $result2 = mysqli_query($conn, $sql2);
                 $row = mysqli_fetch_array($result2);
                 $kepid = $row['cars_picture'];
-                unlink("kepek/$kepid");
+                unlink("pictures/$kepid");
                     $query = mysqli_query($conn, $sql);
                     if ($query){
                         echo '<div class="alert alert-success alert-dismissible d-flex align-items-center" role="alert">
@@ -150,7 +150,7 @@
             }
 
             $fajlnev = $auto_increment.'.'.pathinfo($_FILES['kep']['name'], PATHINFO_EXTENSION);
-            $cel = "kepek/".$fajlnev;
+            $cel = "pictures/".$fajlnev;
             move_uploaded_file($_FILES['kep']['tmp_name'], $cel);
 
             $sql = "INSERT INTO cars 

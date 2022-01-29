@@ -8,7 +8,7 @@ function tabla(adatok){
 
     for (let elem of adatok) {
         sz+='<div class="card">';
-            sz+='<img class="card-img-top" src="./kepek/'+elem.cars_picture+'"">';
+            sz+='<img class="card-img-top" src="./pictures/'+elem.cars_picture+'"">';
                 sz+='<div class="card-body">';
                     sz+='<h3 class="card-title">'+elem.cars_brand+' '+elem.cars_model+'</h6>';
                     sz+='<li class="card-text">Gyártás éve: '+elem.cars_year+'</li>';
