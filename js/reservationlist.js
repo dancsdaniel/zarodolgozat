@@ -23,9 +23,12 @@ function tabla(adatok){
 
         sz+='<td>';
         let kezdodatum = new Date(elem.reservations_from);
+        kezdodatum.setHours(0,0,0,0);
         let vegedatum = new Date(elem.reservations_to);
+        vegedatum.setHours(0,0,0,0);
         let ma = new Date();
-        ma.setHours(0,0,0,0)
+        ma.setHours(0,0,0,0);
+
         //let maidatum = ma.getFullYear() + '-' + ('0' + (ma.getMonth()+1)).slice(-2) + '-' + ('0' + ma.getDate()).slice(-2);
         console.log(kezdodatum);
         console.log(vegedatum);
