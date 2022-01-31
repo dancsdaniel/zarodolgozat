@@ -12,7 +12,6 @@ include "Includes/navbar.inc.php";
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jármű foglalásaid</title>
     <script src="js/foglalaslista.js"></script>
-    <link rel="stylesheet" href="./css/jarmufoglalasok.css">
 </head>
 <body>
 

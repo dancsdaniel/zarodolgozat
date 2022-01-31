@@ -28,6 +28,6 @@
     }
     #########################################################
     #ReservationController
-    //if($_GET['action']=='myReservation')
-    //    myReservation();
+    if($_GET['action']=='myReservation')
+        myReservation();
 ?>
