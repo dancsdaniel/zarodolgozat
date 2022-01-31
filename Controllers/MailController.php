@@ -1,6 +1,5 @@
 <?php
 function reservationMail($email, $text){
-    try {
         require "Includes/mailconfig.inc.php";
         global $mail;
 
@@ -12,6 +11,4 @@ function reservationMail($email, $text){
         $mail->Body    = $text;
 
         $mail->send();
-    } catch (Exception $e) {
-    }
 }
