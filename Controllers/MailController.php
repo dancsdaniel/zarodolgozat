@@ -13,9 +13,9 @@ function reservationMail($email, $text){
     try {
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
-        $mail->Host       = 'smtp.freemail.hu';
+        $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'autokolcsonzoinfo@freemail.hu';
+        $mail->Username   = 'autokolcsonzoinfo@gmail.com';
         $mail->Password   = 'Autokolcsonzo2022';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
