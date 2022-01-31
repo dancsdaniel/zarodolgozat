@@ -31,6 +31,6 @@ include "Includes/navbar.inc.php";
         </tbody>
     </table>
 
-<?php include "footer.inc.php"; ?>
+<?php include "Includes/footer.inc.php"; ?>
 </body>
 </html>
