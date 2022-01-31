@@ -3,6 +3,26 @@
     include "Includes/loginreq.inc.php";
     include "Controllers/MailController.php";
 
+    function myReservation(){
+        $id = $_SESSION["id"];
+        $sql = "SELECT * FROM reservations WHERE reservations_userid=$id";
+
+        if (isset($conn)) {
+            $result = mysqli_query($conn, $sql);
+        }
+        $kimenet=array();
+        if (mysqli_num_rows($result) > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+                array_push($kimenet,$row);
+            }
+            echo json_encode($kimenet, JSON_UNESCAPED_UNICODE);
+        }
+        else {
+            echo 0;
+        }
+        mysqli_close($conn);
+    }
+
     function addReservation($carid, $userid, $from, $days, $carprice){
         global $conn;
         $fullName = $_SESSION["teljesnev"];

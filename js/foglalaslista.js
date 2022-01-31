@@ -1,5 +1,4 @@
-let valtozo = "asd"
-fetch('http://zarodolgozat.test/db_muveletek/select_foglalasok.php?action='+valtozo+'')
+fetch('routes.php?action=myReservation')
     .then(x => x.json())
     .then(y => tabla(y));
 
