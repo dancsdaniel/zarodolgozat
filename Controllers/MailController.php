@@ -11,7 +11,7 @@ function reservationMail($email, $text){
     $mail = new PHPMailer(true);
 
     try {
-        $mail->SMTPDebug = SMTP::DEBUG_OFF;
+        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
         $mail->Host       = 'smtp.freemail.hu';
         $mail->SMTPAuth   = true;
@@ -29,6 +29,8 @@ function reservationMail($email, $text){
         $mail->Body    = $text;
 
         $mail->send();
+        echo 'Message has been sent';
     } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 }
