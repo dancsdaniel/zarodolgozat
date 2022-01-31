@@ -12,7 +12,7 @@ function tabla(adatok){
         sz+=''+elem.reservations_id+'';
         sz+='</td>';
         sz+='<td>';
-        //sz+=''+elem.cars_brand+' '+elem.cars_model+'';
+        sz+=''+elem.cars_brand+' '+elem.cars_model+'';
         sz+='</td>';
         sz+='<td>';
         sz+=''+elem.reservations_from+'';
