@@ -30,4 +30,5 @@
     #ReservationController
     if($_GET['action']=='myReservation')
         myReservation();
+
 ?>

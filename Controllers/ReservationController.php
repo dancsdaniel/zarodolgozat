@@ -8,7 +8,7 @@
         header("Content-type: application/json; charset=utf8");
 
         $id = $_SESSION["id"];
-        $sql = "SELECT * FROM reservations WHERE reservations_userid=$id";
+        $sql = "SELECT * FROM reservations INNER JOIN cars ON reservations_carid=cars_id WHERE reservations_userid=$id";
 
         if (isset($conn)) {
             $result = mysqli_query($conn, $sql);
