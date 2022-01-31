@@ -1,8 +1,11 @@
 <?php
+$from = new DateTime('2022-01-04');
+$to = new DateTime('2022-01-20');
+
 $period = new DatePeriod(
-    new DateTime('2022-01-04'),
+    $from,
     new DateInterval('P1D'),
-    new DateTime('2022-01-20')
+    $to->modify('+1 day')
 );
 foreach ($period as $key => $value) {
     echo $value->format('Y-m-d');
