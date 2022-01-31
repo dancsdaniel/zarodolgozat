@@ -1,7 +1,7 @@
 <?php
     include "Controllers/CarController.php";
     include "Controllers/UserController.php";
-    //include "Controllers/ReservationController.php";
+    include "Controllers/ReservationController.php";
     include "Controllers/MailController.php";
 
     #CarController
@@ -28,9 +28,7 @@
         toAdmin($e);
     }
     #########################################################
-    /*#ReservationController
-    if($_GET['action']=='myReservation'){
+    #ReservationController
+    if($_GET['action']=='myReservation')
         myReservation();
-    }
-    */
 ?>
