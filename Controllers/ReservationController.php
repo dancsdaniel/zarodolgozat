@@ -4,6 +4,9 @@
     include "Controllers/MailController.php";
 
     function myReservation(){
+        global $conn;
+        header("Content-type: application/json; charset=utf8");
+
         $id = $_SESSION["id"];
         $sql = "SELECT * FROM reservations WHERE reservations_userid=$id";
 
