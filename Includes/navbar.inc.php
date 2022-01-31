@@ -20,7 +20,7 @@ include "loginreq.inc.php";
                     <a class="nav-link" href="../carlist.php">Járműveink listája</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../jarmufoglalas.php">Járműkölcsönzés</a>
+                    <a class="nav-link" href="../reservationlist.php">Járműkölcsönzés</a>
                 </li>
                 <li class="nav-item dropdown" style="display: <?php if(!$_SESSION["admin"]==1) echo "none";?>">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

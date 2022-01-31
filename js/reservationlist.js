@@ -26,6 +26,10 @@ function tabla(adatok){
         let vegedatum = new Date(elem.reservations_to);
         let ma = new Date();
         let maidatum = ma.getFullYear() + '-' + ('0' + (ma.getMonth()+1)).slice(-2) + '-' + ('0' + ma.getDate()).slice(-2);
+        console.log(kezdodatum);
+        console.log(vegedatum);
+        console.log(ma);
+        console.log(maidatum);
 
         console.log(kezdodatum, vegedatum, maidatum);
         if(maidatum >= kezdodatum && maidatum <= vegedatum)

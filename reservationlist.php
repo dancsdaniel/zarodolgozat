@@ -11,7 +11,7 @@ include "Includes/navbar.inc.php";
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jármű foglalásaid</title>
-    <script src="js/foglalaslista.js"></script>
+    <script src="js/reservationlist.js"></script>
 </head>
 <body>
 
