@@ -25,14 +25,15 @@ function tabla(adatok){
         let kezdodatum = new Date(elem.reservations_from);
         let vegedatum = new Date(elem.reservations_to);
         let ma = new Date();
-        let maidatum = ma.getFullYear() + '-' + ('0' + (ma.getMonth()+1)).slice(-2) + '-' + ('0' + ma.getDate()).slice(-2);
+        ma.setHours(0,0,0,0)
+        //let maidatum = ma.getFullYear() + '-' + ('0' + (ma.getMonth()+1)).slice(-2) + '-' + ('0' + ma.getDate()).slice(-2);
         console.log(kezdodatum);
         console.log(vegedatum);
         console.log(ma);
-        console.log(maidatum);
+        //console.log(maidatum);
 
-        console.log(kezdodatum, vegedatum, maidatum);
-        if(maidatum >= kezdodatum && maidatum <= vegedatum)
+        //console.log(kezdodatum, vegedatum, maidatum);
+        if(ma >= kezdodatum && ma <= vegedatum)
             sz+='AKTÍV';
         else
             sz+='INAKTÍV';
