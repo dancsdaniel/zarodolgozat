@@ -49,8 +49,7 @@
         }
         else {
 
-
-            if(0!=filesize($_FILES['kep']['name'])){
+            if(filesize($_FILES['kep']['name'])>=0){
                 $fajlnev = $id.'.'.pathinfo($_FILES['kep']['name'], PATHINFO_EXTENSION);
                 $cel = "pictures/".$fajlnev;
                 move_uploaded_file($_FILES['kep']['tmp_name'], $cel);
