@@ -24,7 +24,6 @@ include "Includes/navbar.inc.php";
             <td>Kezdete</td>
             <td>Vége</td>
             <td>Aktív</td>
-            <td>#</td>>
         </tr>
         </thead>
         <tbody id="adatok">
