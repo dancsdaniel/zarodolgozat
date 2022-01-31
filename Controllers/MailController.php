@@ -21,7 +21,7 @@ function reservationMail($email, $text){
         $mail->Port       = 587;
         $mail->CharSet = 'UTF-8';
 
-        $mail->setFrom('autokolcsonzoinfo@freemail.hu');
+        $mail->setFrom('autokolcsonzoinfo@gmail.com');
         $mail->addAddress($email);
 
         $mail->isHTML(true);
