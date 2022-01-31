@@ -3,6 +3,17 @@
     include "Includes/loginreq.inc.php";
     include "Controllers/MailController.php";
 
+    function allReservation(){
+        global $conn;
+        if (!$_SESSION["admin"] == 1) {
+            echo "Nincs hozzáférésed az admin felülethez, kérlek használj admin jogú felhasználót!";
+        }
+        else {
+            header("Content-type: application/json; charset=utf8");
+            $sql = "SELECT * FROM reservations INNER JOIN cars reservations_carid=cars_id";
+        }
+    }
+
     function myReservation(){
         global $conn;
         header("Content-type: application/json; charset=utf8");
