@@ -31,4 +31,8 @@
     if($_GET['action']=='myReservation')
         myReservation();
 
+    if($_GET['action']=='reservedDates'){
+        $id = $_GET['id'];
+        reservedDates($id);
+    }
 ?>

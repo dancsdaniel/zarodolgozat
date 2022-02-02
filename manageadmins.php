@@ -14,7 +14,7 @@ else{
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script src="js/adminkezeles.js"></script>
+        <script src="js/manageadmins.js"></script>
         <link rel="stylesheet" href="./css/adminkezeles.css">
         <title>Adminisztrátorok kezelése</title>
     </head>
@@ -53,8 +53,8 @@ else{
             </table>
         </div>
     </body>
-    </html>
     <?php
-}
-include "footer.inc.php";
-?>
+    }
+    include "Includes/footer.inc.php";
+    ?>
+    </html>

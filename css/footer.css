@@ -1,6 +1,10 @@
 .footer{
     background-color: #a7ecf2 !important;
     margin-top: 10px !important;
+    position: fixed;
+    height: 20px;
+    bottom: 0;
+    width: 100%;
 }
 
 .container{

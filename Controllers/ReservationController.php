@@ -3,6 +3,36 @@
     include "Includes/loginreq.inc.php";
     include "Controllers/MailController.php";
 
+    function reservedDates($carid){
+        global $conn;
+        $sql = "SELECT reservations_from, reservations_to FROM reservations WHERE reservations_carid = $carid";
+
+        if (isset($conn)) {
+            $result = mysqli_query($conn, $sql);
+        }
+        $reserveddates=array();
+        if (mysqli_num_rows($result) > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+                $from = new DateTime($row['reservations_from']);
+                $to = new DateTime($row['reservations_to']);
+                $period = new DatePeriod(
+                    $from,
+                    new DateInterval('P1D'),
+                    $to
+                );
+                foreach ($period as $key => $value) {
+                    $item = $value->format('Y-m-d');
+                    array_push($reserveddates, $item);
+                }
+            }
+            echo json_encode($reserveddates, JSON_UNESCAPED_UNICODE);
+        }
+        else {
+            echo 0;
+        }
+        mysqli_close($conn);
+    }
+
     function allReservation(){
         global $conn;
         if (!$_SESSION["admin"] == 1) {

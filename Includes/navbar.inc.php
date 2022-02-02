@@ -10,7 +10,7 @@ include "loginreq.inc.php";
 
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Autókölcsönző</a>
+        <a class="navbar-brand" href="../index.php">Autókölcsönző</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +28,7 @@ include "loginreq.inc.php";
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="../managecars.php">Járművek kezelése</a></li>
-                        <li><a class="dropdown-item" href="../foglalasokkezelese.php">Foglalások kezelése</a></li>
+                        <li><a class="dropdown-item" href="../managereservations.php">Foglalások kezelése</a></li>
                         <li><a class="dropdown-item" href="../manageadmins.php">Adminisztrátorok kezelése</a></li>
                     </ul>
                 </li>

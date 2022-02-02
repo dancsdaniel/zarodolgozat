@@ -11,7 +11,11 @@ include "Includes/loginreq.inc.php";
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Járműveink listája</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="js/carlist.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="./css/jarmulista.css">
 </head>
 <body>
@@ -41,7 +45,7 @@ include "Includes/loginreq.inc.php";
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás" id="closebutton"></button>
                 </div>
                 <form method="POST">
                     <div class="modal-body" id="modaltest">
@@ -51,7 +55,9 @@ include "Includes/loginreq.inc.php";
 
                     </div>
 
+                    <span id="reservebutton" style="display: none">
                         <button type="submit" name="submit" class="btn btn-primary">Jármű kölcsönzése</button>
+                    <span>
                 </form>
             </div>
         </div>

@@ -23,6 +23,7 @@ body{
 
 #adatok{
     justify-content: space-evenly;
+    padding-bottom: 60px;
 }
 
 .btn{
