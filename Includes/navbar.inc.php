@@ -36,7 +36,7 @@ include "loginreq.inc.php";
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <span class="nav-link">Bejelentkezve mint: <?php echo $_SESSION["teljesnev"]; ?>
-                    <a class="nav-link" href="../logout.php"> Kijelentkezés</a>
+                    <a class="nav-link" style="text-align: center" href="../logout.php"> Kijelentkezés</a>
                 </li>
             </ul>
         </div>

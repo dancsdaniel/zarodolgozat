@@ -3,6 +3,45 @@
     include "Includes/loginreq.inc.php";
     include "Controllers/MailController.php";
 
+    function delReservation($id){
+        global $conn;
+        if (!$_SESSION["admin"] == 1) {
+            echo "Nincs hozzáférésed az admin felülethez, kérlek használj admin jogú felhasználót!";
+        } else {
+            $sql = "DELETE FROM reservations WHERE reservations_id='$id'";
+            if (isset($conn)) {
+                $result = mysqli_query($conn, $sql);
+                echo $result;
+                header('Location: ../managereservations.php');
+            }
+        }
+    }
+
+    function findReservation($id){
+        global $conn;
+        if (!$_SESSION["admin"] == 1) {
+            echo "Nincs hozzáférésed az admin felülethez, kérlek használj admin jogú felhasználót!";
+        }
+        else{
+            header("Content-type: application/json; charset=utf8");
+            $sql = "SELECT * FROM reservations INNER JOIN users ON reservations_userid = users_id WHERE reservations_carid=$id";
+            if (isset($conn)) {
+                $result = mysqli_query($conn, $sql);
+            }
+            $kimenet=array();
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    array_push($kimenet,$row);
+                }
+                echo json_encode($kimenet, JSON_UNESCAPED_UNICODE);
+            }
+            else {
+                echo 0;
+            }
+            mysqli_close($conn);
+        }
+    }
+
     function reservedDates($carid){
         global $conn;
         $sql = "SELECT reservations_from, reservations_to FROM reservations WHERE reservations_carid = $carid";
@@ -40,7 +79,21 @@
         }
         else {
             header("Content-type: application/json; charset=utf8");
-            $sql = "SELECT * FROM reservations INNER JOIN cars reservations_carid=cars_id";
+            $sql = "SELECT * FROM reservations INNER JOIN users ON reservations_userid = users_id";
+            if (isset($conn)) {
+                $result = mysqli_query($conn, $sql);
+            }
+            $kimenet=array();
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    array_push($kimenet,$row);
+                }
+                echo json_encode($kimenet, JSON_UNESCAPED_UNICODE);
+            }
+            else {
+                echo 0;
+            }
+            mysqli_close($conn);
         }
     }
 

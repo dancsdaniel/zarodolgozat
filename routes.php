@@ -35,4 +35,17 @@
         $id = $_GET['id'];
         reservedDates($id);
     }
+
+    if($_GET['action']=='findReservation'){
+        $id = $_GET['id'];
+        if ($id==0){
+            allReservation();
+        }
+        findReservation($id);
+    }
+
+    if($_GET['action']=='delReservation'){
+        $id = $_GET['id'];
+        delReservation($id);
+    }
 ?>
