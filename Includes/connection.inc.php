@@ -11,7 +11,7 @@ $username1 = "root";
 $password1 = "";
 $dbname1 = "autokolcsonzo";
 
-if ($local = 1){
+if ($local == 1){
     $conn = mysqli_connect($servername1, $username1, $password1, $dbname1);
     if (!$conn) {
         die("Kapcsolódás sikertelen: " . mysqli_connect_error());
