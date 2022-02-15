@@ -1,5 +1,5 @@
 <?php
-$local = 0;
+$local = 1;
 
 $servername0 = "sql213.epizy.com";
 $username0 = "epiz_30928740";
