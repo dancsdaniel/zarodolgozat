@@ -15,8 +15,8 @@ function reservationMail($email, $text){
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'autokolcsonzoinfo@gmail.com';
-        $mail->Password   = 'Autokolcsonzo2022';
+        $mail->Username   = 'x';
+        $mail->Password   = 'x';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         $mail->CharSet = 'UTF-8';
