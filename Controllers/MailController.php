@@ -8,6 +8,7 @@ require 'Includes/PHPMailer/PHPMailer.php';
 require 'Includes/PHPMailer/SMTP.php';
 
 function reservationMail($email, $text){
+    require 'Includes/config.inc.php';
     $mail = new PHPMailer(true);
 
     try {
@@ -15,13 +16,13 @@ function reservationMail($email, $text){
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'autokolcsonzoinfo@gmail.com';
-        $mail->Password   = 'Autokolcsonzo2022';
+        $mail->Username   = $gmailuser;
+        $mail->Password   = $gmailpass;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         $mail->CharSet = 'UTF-8';
 
-        $mail->setFrom('autokolcsonzoinfo@gmail.com');
+        $mail->setFrom($gmailuser);
         $mail->addAddress($email);
 
         $mail->isHTML(true);
