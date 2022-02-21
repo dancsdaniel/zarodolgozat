@@ -1,2 +1,3 @@
 .DS_Store
-Includes/config.inc.php
+#pictures/**
+**/config.inc.php
