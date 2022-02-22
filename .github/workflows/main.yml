@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: sftp://autokolcsonzo.swedencentral.cloudapp.azure.com:22
+        server: autokolcsonzo.swedencentral.cloudapp.azure.com
         username: dancsdaniel
         password: ${{ secrets.ftp_password }}
         server-dir: /var/www/html/
