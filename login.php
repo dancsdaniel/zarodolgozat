@@ -1,6 +1,5 @@
 <?php
    include "Controllers/UserController.php";
-   phpinfo();
 ?>
 
 <!doctype html>
