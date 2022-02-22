@@ -12,6 +12,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: sftp://autokolcsonzo.swedencentral.cloudapp.azure.com
+        port: 22
         username: dancsdaniel
         password: ${{ secrets.ftp_password }}
         server-dir: /var/www/html/
