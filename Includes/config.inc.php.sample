@@ -1,11 +1,12 @@
 <?php
-//MySQL adatbázis beállítása
-$dbserver = "";
-$dbuser = "";
-$dbpass = "";
-$dbname = "";
+//Copy this file as "config.inc.php" to the "Includes" directory
+//MySQL database credentials
+$dbserver = "{replace}";
+$dbuser = "{replace}";
+$dbpass = "{replace}";
+$dbname = "{replace}";
 
-//GMail felhasználó beállításása e-mailek küldéséhez
+//GMail login credentials
 
-$gmailuser = "";
-$gmailpass = "";
+$gmailuser = "{replace}";
+$gmailpass = "{replace}";
