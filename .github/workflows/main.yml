@@ -14,4 +14,4 @@ jobs:
         server: sftp://autokolcsonzo.swedencentral.cloudapp.azure.com:22
         username: dancsdaniel
         password: ${{ secrets.ftp_password }}
-        server-dir: /var/www/html
+        server-dir: /var/www/html/
