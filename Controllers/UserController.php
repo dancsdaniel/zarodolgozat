@@ -19,11 +19,11 @@
                     $_SESSION["email"] = $row['users_email'];
                     $_SESSION["admin"] = $row['users_admin'];
 
-                    //header("Location: ../index.php");
+                    header("Location: ../index.php");
                 }}
             else {
                 echo "Hibás felhasználónév vagy jelszó!";
-                //header("Location: ../index.php");
+                header("Location: ../index.php");
             }
         }
     }

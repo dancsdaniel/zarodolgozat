@@ -6,5 +6,6 @@ $dbpass = "";
 $dbname = "";
 
 //GMail felhasználó beállításása e-mailek küldéséhez
+
 $gmailuser = "";
 $gmailpass = "";
