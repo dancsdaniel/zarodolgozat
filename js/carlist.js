@@ -20,6 +20,7 @@ function tabla(adatok){
     }
     document.getElementById("adatok").innerHTML=sz;
 }
+
 let allbaddate = [];
 let mydates=[];
 
@@ -85,14 +86,13 @@ function isDaysFree(){
     let from = new Date(document.getElementById("datepicker").value);
 
     let newdate = new Date(from.getTime() + (days * 24 * 60 * 60 * 1000) );
-    newdate.setUTCHours(0,0,0,0)
-    console.log();
+    newdate.setUTCHours(0,0,0,0);
 
     mydates.push(newdate.toISOString().substring(0, 10));
     if(baddate(mydates, allbaddate)){
         document.getElementById("szamitottdij").innerHTML="Hibás időtartam! Az ablak 2 másodperc múlva bezáródik...";
         document.getElementById("reservebutton").style.display="none";
-        setInterval(function(){document.getElementById("closebutton").click()}, 3000);
+        setTimeout(()=>{document.getElementById("closebutton").click()}, 2000);
     }
 }
 

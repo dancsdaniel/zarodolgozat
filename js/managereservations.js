@@ -25,7 +25,7 @@ function findReservation() {
 }
 
 function listReservation(adatok){
-    if (typeof adatok=="undefined"){
+    if (adatok==[]){
         document.getElementById("adatok").innerHTML="Nem tartozik a járműhöz foglalás!";
     }
     else{
