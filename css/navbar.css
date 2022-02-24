@@ -1,11 +1,16 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 .navbar{
-    /*background-color: #a7ecf2 !important;*/
     background-color: #ffa31a !important;
     padding-left: 50px;
     padding-right: 50px;
     border-bottom: 2px solid black;
     min-height: 100px;
+    font-weight: 700;
 }
+
 li.nav-item{
     margin-top: auto;
     margin-bottom: auto;

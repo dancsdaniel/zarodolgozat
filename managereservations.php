@@ -42,5 +42,5 @@ else{
     </html>
     <?php
 }
-include "footer.inc.php";
+include "Includes/footer.inc.php";
 ?>
