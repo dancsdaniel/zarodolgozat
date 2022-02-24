@@ -64,6 +64,7 @@ function modal(id, marka, tipus, gyartaseve, dij){
             isRTL: false,
             showMonthAfterYear: false,
             yearSuffix: ''});
+            
         $("#datepicker").datepicker({
             minDate: new Date(),
             beforeShowDay: DisableDates

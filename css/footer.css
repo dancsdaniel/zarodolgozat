@@ -1,13 +1,10 @@
 .footer{
-    background-color: #a7ecf2 !important;
+    background-color: orange !important;
     margin-top: 10px !important;
-    position: fixed;
-    height: 20px;
-    bottom: 0;
-    width: 100%;
+    border-top: 2px solid black;
 }
 
-.container{
-    font-size: 10px !important;
-    margin-left: auto;
+#footerszoveg{
+    font-size: 12px !important;
+    text-align: center;
 }
