@@ -13,7 +13,7 @@ include "Includes/loginreq.inc.php";
 </head>
 <body>
     <?php include "Includes/navbar.inc.php"; ?>
-        <h2>Üdvözöljük az oldalon</h2>
+        <h1>Üdvözöljük az oldalon</h1>
     <?php include "Includes/footer.inc.php"; ?>
 </body>
 </html>
