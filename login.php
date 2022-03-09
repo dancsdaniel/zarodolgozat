@@ -12,15 +12,17 @@
     <title>Azonosítás</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<h1>Üdvözlünk autokölcsönzőnk oldalán!</h1>
+<h1>Üdvözlünk a Rentaka autókölcsönző oldalán!</h1>
 <h2> Az elérhető járműkínálatunk megtekintéséhez kérjük lépjen be, vagy regisztráljon ingyenesen oldaunkra!</h2>
 
+<div id="login-button">
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">
     Bejelentkezés
 </button>
+</div>
 <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -51,9 +53,11 @@
     </div>
 </div>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg">
+<div id="reg-button">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#reg">
     Regisztráció
 </button>
+</div>
 <div class="modal fade" id="reg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

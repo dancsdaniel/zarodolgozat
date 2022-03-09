@@ -50,18 +50,12 @@
         else {
 
             if(filesize($_FILES['kep']['name'])>=0){
-                $fajlnev = $id.'.'.pathinfo($_FILES['kep']['name'], PATHINFO_EXTENSION);
+                $fajlnev = $id;
                 $cel = "pictures/".$fajlnev;
                 move_uploaded_file($_FILES['kep']['tmp_name'], $cel);
                 $sql = "UPDATE cars SET
                 cars_brand='$marka', cars_model='$tipus', cars_year=$gyartaseve, cars_power='$teljesitmeny',
                 cars_seats=$ferohely, cars_price=$dij, cars_picture='$fajlnev'
-                WHERE cars_id=$id";
-            }
-            else{
-                $sql = "UPDATE cars SET
-                cars_brand='$marka', cars_model='$tipus', cars_year=$gyartaseve, cars_power='$teljesitmeny',
-                cars_seats=$ferohely, cars_price=$dij
                 WHERE cars_id=$id";
             }
 

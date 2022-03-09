@@ -141,7 +141,7 @@
                     <p>Az autó napidíja <b>$carprice Ft</b>, A kölcsönzött napok száma <b>$days nap</b>, <br>
                     így a végösszeg <b>$price Ft</b><p>
                     <p style='text-align: right;'>Köszönjük, hogy minket választott!</p>
-                    <p style='text-align: right;'>Üdvözlettel, az Autókölcsönző!</p>
+                    <p style='text-align: right;'>Üdvözlettel, a Rentaka autókölcsönző!</p>
                     ";
                     reservationMail($emailAddress, $text);
                     echo '<div class="alert alert-success alert-dismissible d-flex align-items-center" role="alert">

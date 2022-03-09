@@ -1,0 +1,19 @@
+h1, h2{
+    text-align: center;
+}
+
+#login-button{
+    margin: 10px auto 10px auto;
+}
+
+#login-button, button{
+    width: 300px;
+}
+
+#reg-button{
+    margin: 10px auto 10px auto;
+}
+
+#reg-button, button{
+    width: 300px;
+}

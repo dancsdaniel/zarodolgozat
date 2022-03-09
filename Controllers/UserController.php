@@ -31,22 +31,19 @@
         $jelszo2 = md5($password2 . $kod);
         $hiba = "";
 
-        //megadta a felhasználónevet?
         if ($teljesnev == "")
             $hiba .= "A teljes név megadása kötelező!<br>";
 
         if ($email == "")
             $hiba .= "Az e-mail cím megadása kötelező!<br>";
 
-        //Jelszó/jelszavak hosszúsága
+
         if ($jelszo1 == "")
             $hiba .= "A jelszó megadása kötelező!<br>";
 
-        //Egyezik-e a két jelszó
         if ($jelszo1 != $jelszo2)
             $hiba .= "A két jelszó nem megegyező!<br>";
 
-        //Lehetséges-e a regisztráció?
         if ($hiba != "") {
             echo $hiba;
             echo "<a href = '../login.php'> Vissza a regisztrációhoz. </a>";
