@@ -1,7 +1,3 @@
-<?php
-include "loginreq.inc.php";
-?>
-
 <head>
     <link rel="stylesheet" href="../css/footer.css">
 </head>

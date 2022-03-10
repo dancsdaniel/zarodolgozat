@@ -18,8 +18,12 @@
                     $_SESSION["teljesnev"] = $row['users_fullname'];
                     $_SESSION["email"] = $row['users_email'];
                     $_SESSION["admin"] = $row['users_admin'];
-                }}
+                }
                 header("Location: ../index.php");
+            }
+            else{
+                    echo "<h4 style='text-align: center; color: red;'>Nem megfelelő E-mail cím, vagy jelszó!</h4>";
+            }
         }
     }
 
@@ -32,23 +36,22 @@
         $hiba = "";
 
         if ($teljesnev == "")
-            $hiba .= "A teljes név megadása kötelező!<br>";
+            $hiba .= "<h4 style='text-align: center; color: red;'>A teljes név megadása kötelező!</h4>";
 
         if ($email == "")
-            $hiba .= "Az e-mail cím megadása kötelező!<br>";
-
+            $hiba .= "<h4 style='text-align: center; color: red;'>Az e-mail cím megadása kötelező!</h4>";
 
         if ($jelszo1 == "")
-            $hiba .= "A jelszó megadása kötelező!<br>";
+            $hiba .= "<h4 style='text-align: center; color: red;'>A jelszó megadása kötelező!</h4>";
 
         if ($jelszo1 != $jelszo2)
-            $hiba .= "A két jelszó nem megegyező!<br>";
+            $hiba .= "<h4 style='text-align: center; color: red;'>A két jelszó nem megegyező!</h4>";
 
         if ($hiba != "") {
             echo $hiba;
-            echo "<a href = '../login.php'> Vissza a regisztrációhoz. </a>";
             exit();
         }
+
         else {
             $sql = "INSERT INTO users (users_fullname, users_email, users_password)
                     VALUES ('$teljesnev','$email', '$jelszo1')";

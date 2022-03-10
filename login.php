@@ -14,7 +14,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/login.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+<div style="padding: 10px;">
 <h1>Üdvözlünk a Rentaka autókölcsönző oldalán!</h1>
 <h2> Az elérhető járműkínálatunk megtekintéséhez kérjük lépjen be, vagy regisztráljon ingyenesen oldaunkra!</h2>
 
@@ -39,15 +40,7 @@
                     <input type="submit" name="login" class="btn btn-success" value="Bejelentkezés">
 
                 </form>
-                <?php
-                    if(isset($_POST["login"]))
-                    {
-                        $e = $_POST['email'];
-                        $j = $_POST['jelszo'];
-
-                        findUser($e, $j);
-                    }
-                ?>
+                
             </div>
         </div>
     </div>
@@ -58,6 +51,26 @@
     Regisztráció
 </button>
 </div>
+<?php
+                    if(isset($_POST["login"]))
+                    {
+                        $e = $_POST['email'];
+                        $j = $_POST['jelszo'];
+
+                        findUser($e, $j);
+                    }
+?>
+<?php
+                if(isset($_POST["reg"]))
+                {
+                    $t = $_POST['reg_teljesnev'];
+                    $e = $_POST['reg_email'];
+                    $pw1 = $_POST['reg_jelszo1'];
+                    $pw2 = $_POST['reg_jelszo2'];
+
+                    addUser($t, $e, $pw1, $pw2);
+                }
+?>
 <div class="modal fade" id="reg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -76,22 +89,13 @@
                     <input type="submit" name="reg" class="btn btn-success" value="Regisztráció">
 
                 </form>
-                <?php
-                if(isset($_POST["reg"]))
-                {
-                    $t = $_POST['reg_teljesnev'];
-                    $e = $_POST['reg_email'];
-                    $pw1 = $_POST['reg_jelszo1'];
-                    $pw2 = $_POST['reg_jelszo2'];
-
-                    addUser($t, $e, $pw1, $pw2);
-                }
-                ?>
+                
 
             </div>
         </div>
     </div>
 </div>
-
+</div>
+<?php include "Includes/footer.inc.php" ?>
 </body>
 </html>
