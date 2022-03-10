@@ -120,6 +120,7 @@ include "Includes/navbar.inc.php";
         <table class="table table-striped table-hover">
             <thead>
             <tr>
+                <td>Azonosító</td>
                 <td>Márka</td>
                 <td>Típus</td>
                 <td>Gyártási év</td>

@@ -1,12 +1,8 @@
-body{
-    background-color: #ffffff;
-}
-
 .card{
     width:400px;
     margin: 20px !important;
-    background-color: #a7ecf2;
-    box-shadow: #3e9cbf 10px 20px;
+    background-color: #ffa31a;
+    box-shadow: slategrey 10px 20px;
     border-radius: 35px;
     border: 1px solid black;
 }

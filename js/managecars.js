@@ -9,6 +9,9 @@ function tabla(adatok){
     for (let elem of adatok) {
         sz+='<tr>';
         sz+='<td>';
+        sz+=''+elem.cars_id+'';
+        sz+='</td>';
+        sz+='<td>';
         sz+=''+elem.cars_brand+'';
         sz+='</td>';
         sz+='<td>';
@@ -16,6 +19,9 @@ function tabla(adatok){
         sz+='</td>';
         sz+='<td>';
         sz+=''+elem.cars_year+'';
+        sz+='</td>';
+        sz+='<td>';
+        sz+='<img style="width: 200px;" src="./pictures/'+elem.cars_picture+'"">';
         sz+='</td>';
         sz+='<td>';
         sz+='<button data-bs-toogle="modal" data-bs-target="#exampleModal" type="button" onclick="del('+elem.cars_id+')" class="btn btn-outline-danger btn-sm">Jármű törlése</button>';

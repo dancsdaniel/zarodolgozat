@@ -1,5 +1,6 @@
 .footer{
-    background-color: orange !important;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffa31a !important;
     margin-top: 10px !important;
     border-top: 2px solid black;
     font-weight: 700;
