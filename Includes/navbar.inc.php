@@ -12,6 +12,23 @@ include "loginreq.inc.php";
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
+<div class="modal fade" id="changepass" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Jelszó megváltoztatása</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <form method="POST">
+                <p>Új jelszó megadása: <input type="password" name="newpass" class="form-control"></p>
+                <input type="submit" name="changepass" class="btn btn-danger" value="Jelszó megváltoztatása">
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="../index.php">Rentaka</a>
@@ -38,11 +55,24 @@ include "loginreq.inc.php";
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <span class="nav-link">Bejelentkezve mint: <?php echo $_SESSION["teljesnev"]; ?>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bejelentkezve mint: <?php echo $_SESSION["teljesnev"]; ?></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#changepass">Jelszó megváltoztatása</a></li>
+                    </ul>
                 </li>
                 <a class="nav-link nav-item" style="text-align: center" href="../logout.php"> Kijelentkezés</a>
             </ul>
         </div>
     </div>
 </nav>
+
+<?php
+    if(isset($_POST["changepass"]))
+    {
+        $newpassword = $_POST['newpass'];
+
+        include "Controllers/UserController.php";
+        changePassword($newpassword);
+    }
+?>

@@ -18,7 +18,7 @@ include "Includes/loginreq.inc.php";
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="./css/jarmulista.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <?php
     if(isset($_POST["submit"]))

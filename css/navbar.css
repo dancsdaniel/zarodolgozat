@@ -9,6 +9,7 @@ body{
     border-bottom: 2px solid black;
     min-height: 100px;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 li.nav-item{

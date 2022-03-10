@@ -14,7 +14,7 @@ include "Includes/navbar.inc.php";
         <script src="js/managecars.js"></script>
         <title>Járművek kezelése</title>
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
 
     <?php
     if(isset($_POST["submit"]))

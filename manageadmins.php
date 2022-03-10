@@ -18,7 +18,7 @@ else{
         <link rel="stylesheet" href="./css/adminkezeles.css">
         <title>Adminisztrátorok kezelése</title>
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <div id="tartalom">
         <h1>Adminisztrátorok kezelése</h1>
 

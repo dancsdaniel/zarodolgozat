@@ -1,5 +1,6 @@
 <?php
 include "Includes/loginreq.inc.php";
+include "Includes/navbar.inc.php";
 ?>
 
 <!doctype html>
@@ -9,11 +10,12 @@ include "Includes/loginreq.inc.php";
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
     <title>Főoldal</title>
 </head>
-<body>
-    <?php include "Includes/navbar.inc.php"; ?>
-        <h1>Üdvözöljük az oldalonx</h1>
+<body class="d-flex flex-column min-vh-100">
+    <?php  ?>
+        <h1>Üdvözlünk a Rentaka autókölcsönző oldalán!</h1>
     <?php include "Includes/footer.inc.php"; ?>
 </body>
 </html>

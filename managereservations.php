@@ -17,7 +17,7 @@ else{
         <link rel="stylesheet" href="css/managereservations.css">
         <title>Foglalások kezelése</title>
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <h1>Foglalások kezelése</h1>
         <p>A kezdéshez válassza ki a járművet a hozzá kapcsolódó jármű megjelentítéséhez.</p>
 
