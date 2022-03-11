@@ -16,7 +16,7 @@ include "Includes/loginreq.inc.php";
     <script src="js/carlist.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="./css/jarmulista.css">
+    <link rel="stylesheet" href="./css/carlist.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
