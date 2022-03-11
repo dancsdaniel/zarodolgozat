@@ -6,7 +6,8 @@ $dbuser = "{replace}";
 $dbpass = "{replace}";
 $dbname = "{replace}";
 
-//GMail login credentials
+//E-mail STMP login credentials
 
-$gmailuser = "{replace}";
-$gmailpass = "{replace}";
+$emailServer = "{replace}";
+$emailUsername = "{replace}";
+$emailPassword = "{replace}";

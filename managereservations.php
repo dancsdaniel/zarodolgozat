@@ -1,6 +1,6 @@
 <?php
-include "Includes/loginreq.inc.php";
-include "Includes/navbar.inc.php";
+include_once "Includes/loginreq.inc.php";
+include_once "Includes/navbar.inc.php";
 if (!$_SESSION["admin"]==1){
     echo "Nincs hozzáférésed az admin felülethez, kérlek használj admin jogú felhasználót!";
 }
@@ -43,5 +43,5 @@ else{
     </html>
     <?php
 }
-include "Includes/footer.inc.php";
+include_once "Includes/footer.inc.php";
 ?>

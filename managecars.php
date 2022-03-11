@@ -1,6 +1,6 @@
 <?php
-include "Includes/loginreq.inc.php";
-include "Includes/navbar.inc.php";
+include_once "Includes/loginreq.inc.php";
+include_once "Includes/navbar.inc.php";
 {
     ?>
     <!doctype html>
@@ -26,7 +26,7 @@ include "Includes/navbar.inc.php";
         $ferohely = $_POST['ferohely'];
         $dij = $_POST['dij'];
 
-        include "Controllers/CarController.php";
+        include_once "Controllers/CarController.php";
         if ($_POST["edit"]==1){
             echo editCar($_POST["id"],$marka,$tipus,$gyartaseve,$teljesitmeny,$ferohely,$dij);
         }
@@ -136,5 +136,5 @@ include "Includes/navbar.inc.php";
     </html>
     <?php
 }
-include "Includes/footer.inc.php";
+include_once "Includes/footer.inc.php";
 ?>

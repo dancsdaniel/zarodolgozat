@@ -1,7 +1,7 @@
 <?php
-    include "Controllers/CarController.php";
-    include "Controllers/UserController.php";
-    include "Controllers/ReservationController.php";
+    include_once "Controllers/CarController.php";
+    include_once "Controllers/UserController.php";
+    include_once "Controllers/ReservationController.php";
 
     #CarController
     if($_GET['action']=='allCar')

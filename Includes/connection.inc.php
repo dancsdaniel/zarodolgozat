@@ -1,5 +1,5 @@
 <?php
-include "config.inc.php";
+include_once "config.inc.php";
 
 $conn = mysqli_connect($dbserver, $dbuser, $dbpass, $dbname);
 if (!$conn) {

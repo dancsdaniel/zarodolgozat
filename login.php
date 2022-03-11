@@ -1,5 +1,5 @@
 <?php
-   include "Controllers/UserController.php";
+   include_once "Controllers/UserController.php";
 ?>
 
 <!doctype html>
@@ -96,6 +96,6 @@
     </div>
 </div>
 </div>
-<?php include "Includes/footer.inc.php" ?>
+<?php include_once "Includes/footer.inc.php" ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
-    include "Includes/connection.inc.php";
-    include "Includes/loginreq.inc.php";
+    include_once "Includes/connection.inc.php";
+    include_once "Includes/loginreq.inc.php";
 
     function findCar($id){
         global $conn;

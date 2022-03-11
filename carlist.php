@@ -1,6 +1,6 @@
 <?php
-include "Includes/navbar.inc.php";
-include "Includes/loginreq.inc.php";
+include_once "Includes/navbar.inc.php";
+include_once "Includes/loginreq.inc.php";
 ?>
 
 <!doctype html>
@@ -30,7 +30,7 @@ include "Includes/loginreq.inc.php";
         $carprice = $_POST["carprice"];
 
 
-        include "Controllers/ReservationController.php";
+        include_once "Controllers/ReservationController.php";
             echo addReservation($carid, $userid, $from, $days, $carprice);
     }
     ?>
@@ -63,6 +63,6 @@ include "Includes/loginreq.inc.php";
         </div>
     </div>
 
-    <?php include "Includes/footer.inc.php"; ?>
+    <?php include_once "Includes/footer.inc.php"; ?>
 </body>
 </html>

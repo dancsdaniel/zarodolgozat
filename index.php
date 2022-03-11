@@ -1,6 +1,6 @@
 <?php
-include "Includes/loginreq.inc.php";
-include "Includes/navbar.inc.php";
+include_once "Includes/loginreq.inc.php";
+include_once "Includes/navbar.inc.php";
 ?>
 
 <!doctype html>
@@ -16,6 +16,6 @@ include "Includes/navbar.inc.php";
 <body class="d-flex flex-column min-vh-100">
     <?php  ?>
         <h1>Üdvözlünk a Rentaka autókölcsönző oldalán!</h1>
-    <?php include "Includes/footer.inc.php"; ?>
+    <?php include_once "Includes/footer.inc.php"; ?>
 </body>
 </html>

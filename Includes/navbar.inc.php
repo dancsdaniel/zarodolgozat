@@ -1,5 +1,5 @@
 <?php
-include "loginreq.inc.php";
+include_once "loginreq.inc.php";
 ?>
 
 <head>
@@ -12,11 +12,11 @@ include "loginreq.inc.php";
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
-<div class="modal fade" id="changepass" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="changepass" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Jelszó megváltoztatása</h5>
+                <h5 class="modal-title" id="exampleModalLabel1">Jelszó megváltoztatása</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -72,7 +72,7 @@ include "loginreq.inc.php";
     {
         $newpassword = $_POST['newpass'];
 
-        include "Controllers/UserController.php";
+        include_once "Controllers/UserController.php";
         changePassword($newpassword);
     }
 ?>

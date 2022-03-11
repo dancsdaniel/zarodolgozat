@@ -1,6 +1,6 @@
 <?php
-include "Includes/loginreq.inc.php";
-include "Includes/navbar.inc.php";
+include_once "Includes/loginreq.inc.php";
+include_once "Includes/navbar.inc.php";
 ?>
 
 <!doctype html>
@@ -32,6 +32,6 @@ include "Includes/navbar.inc.php";
         </tbody>
     </table>
 
-<?php include "Includes/footer.inc.php"; ?>
+<?php include_once "Includes/footer.inc.php"; ?>
 </body>
 </html>

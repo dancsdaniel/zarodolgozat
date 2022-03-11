@@ -1,7 +1,7 @@
 <?php
-    include "Includes/connection.inc.php";
-    include "Includes/loginreq.inc.php";
-    include "Controllers/MailController.php";
+    include_once "Includes/connection.inc.php";
+    include_once "Includes/loginreq.inc.php";
+    include_once "Controllers/MailController.php";
 
     function delReservation($id){
         global $conn;
@@ -137,13 +137,13 @@
                 if ($query){
                     $text = "
                     <h1>Kedves <i>$fullName</i></h1>
-                    <p>Ön legfoglalta <b>asd</b> járművünket <b>$from-tól $to-ig</b>.</p>
+                    <p>Ön legfoglalta <b></b> járművünket <b>$from-tól $to-ig</b>.</p>
                     <p>Az autó napidíja <b>$carprice Ft</b>, A kölcsönzött napok száma <b>$days nap</b>, <br>
                     így a végösszeg <b>$price Ft</b><p>
                     <p style='text-align: right;'>Köszönjük, hogy minket választott!</p>
                     <p style='text-align: right;'>Üdvözlettel, a Rentaka autókölcsönző!</p>
                     ";
-                    reservationMail($emailAddress, $text);
+                    sendMail($emailAddress, $text, 'Foglalása visszaigazolása - Rentaka');
                     echo '<div class="alert alert-success alert-dismissible d-flex align-items-center" role="alert">
                                 <svg style="margin-right: 8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
