@@ -69,6 +69,28 @@
         }
     }
 
+    function deleteUser($id){
+        global $conn;
+        $fullName = $_SESSION["teljesnev"];
+        $emailAddress = $_SESSION["email"];
+
+            $sql2 = "DELETE FROM reservations WHERE reservations_userid=$id";
+            $sql = "DELETE FROM users WHERE users_id=$id";
+            if (isset($conn)) {
+                mysqli_query($conn, $sql2);
+                    $query = mysqli_query($conn, $sql);
+                    if ($query){
+                        $text = "
+                            <h1>Kedves <i>$fullName</i></h1>
+                            <p>Ön felhasználói fiókja sikeresen törlésre került</p>
+                            <p style='text-align: right;'>Köszönjük, hogy minket választott!</p>
+                            <p style='text-align: right;'>Üdvözlettel, a Rentaka autókölcsönző!</p>
+                        ";
+                        sendMail($emailAddress, $text, 'Fiókod sikeresen törlésre került - Rentaka');
+                    }
+            }
+    }
+
     function changePassword($newpassword){
         global $conn;
         $fullName = $_SESSION["teljesnev"];

@@ -29,6 +29,27 @@ include_once "loginreq.inc.php";
     </div>
 </div>
 
+<div class="modal fade" id="delacc" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Felhasználói fiók törlése</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <form method="POST">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" required>
+                <label class="form-check-label" for="flexSwitchCheckDefault" style="color: red; font-size: 16px;">Biztos benne? A művelet nem vonható vissza!</label>
+            </div>
+            <br>
+                <input type="submit" name="delacc" class="btn btn-danger" value="Fiók törlése">
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="../index.php">Rentaka</a>
@@ -59,9 +80,10 @@ include_once "loginreq.inc.php";
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bejelentkezve mint: <?php echo $_SESSION["teljesnev"]; ?></a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#changepass">Jelszó megváltoztatása</a></li>
+                        <li><a style="color: red" class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delacc">Fiók törlése</a></li>
+                        <li><a class="dropdown-item" href="../logout.php"> Kijelentkezés</a></li>
                     </ul>
                 </li>
-                <a class="nav-link nav-item" style="text-align: center" href="../logout.php"> Kijelentkezés</a>
             </ul>
         </div>
     </div>
@@ -74,5 +96,15 @@ include_once "loginreq.inc.php";
 
         include_once "Controllers/UserController.php";
         changePassword($newpassword);
+    }
+
+    if(isset($_POST["delacc"]))
+    {
+        $id = $_SESSION['id'];
+
+        include_once "Controllers/UserController.php";
+        deleteUser($id);
+
+        header("Location: ");
     }
 ?>
