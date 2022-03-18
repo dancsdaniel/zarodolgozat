@@ -30,9 +30,11 @@ function tabla(adatok){
         ma.setHours(0,0,0,0);
 
         if(ma >= kezdodatum && ma <= vegedatum)
-            sz+='AKTÍV';
+            sz+='<span style="color: green">AKTÍV</span>';
+        //if(kezdodatum>ma)
+            //sz+='<span style="color: yellow">JÖVŐBELI</span>';
         else
-            sz+='INAKTÍV';
+            sz+='<span style="color: red">LEJÁRT</span>';
     }
     document.getElementById("adatok").innerHTML=sz;
 }

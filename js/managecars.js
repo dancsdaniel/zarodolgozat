@@ -75,4 +75,5 @@ function formreset(){
     document.getElementById('inputs').style.display='block';
     document.getElementById('crudform').reset();
     document.getElementById('warningmessage').innerHTML="";
+    document.getElementById('exampleModalLabel').innerHTML="Új jármű felvitele";
 }

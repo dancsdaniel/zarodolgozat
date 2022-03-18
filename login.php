@@ -34,7 +34,7 @@
             <div class="modal-body">
                 <form method="POST">
 
-                    <p>E-mail: <input type="text" name="email" class="form-control"></p>
+                    <p>E-mail: <input type="email" name="email" class="form-control"></p>
                     <p>Jelszó: <input type="password" name="jelszo" class="form-control"></p>
 
                     <input type="submit" name="login" class="btn btn-success" value="Bejelentkezés">
@@ -82,7 +82,7 @@
                 <form method="POST">
 
                     <p>Teljes név: <input type="text" name="reg_teljesnev" class="form-control"></p>
-                    <p>E-mail: <input type="text" name="reg_email" class="form-control"></p>
+                    <p>E-mail: <input type="email" name="reg_email" class="form-control"></p>
                     <p>Jelszó: <input type="password" name="reg_jelszo1" class="form-control"></p>
                     <p>Jelszó újra: <input type="password" name="reg_jelszo2" class="form-control"></p>
 

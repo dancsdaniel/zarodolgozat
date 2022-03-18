@@ -1,3 +1,13 @@
 h1{
     text-align: center;
 }
+
+.helpcard{
+    text-align: center;
+    width: 300px;
+    margin: 10px auto 0 auto; 
+}
+
+.helpcard .btn{
+    border-radius: 35px;
+}

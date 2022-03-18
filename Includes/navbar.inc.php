@@ -104,7 +104,5 @@ include_once "loginreq.inc.php";
 
         include_once "Controllers/UserController.php";
         deleteUser($id);
-
-        header("Location: ");
     }
 ?>
