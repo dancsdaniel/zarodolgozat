@@ -1,5 +1,5 @@
 <?php
-//Copy this file as "config.inc.php" to the "Includes" directory
+//Copy this file as "config.inc.php" to the "Includes" directory/
 //MySQL database credentials
 $dbserver = "{replace}";
 $dbuser = "{replace}";
