@@ -31,14 +31,6 @@ include_once "Includes/navbar.inc.php";
                 </div>
             </div>
 
-            <div class="card helpcard">
-                <div class="card-body">
-                    <h5 class="card-title">Dokumentáció</h5>
-                    <p class="card-text">Amennyiben ismerkedne a program működésével, valamint megismerné a fejlesztéshez kapcsolódó részleteket, olvassa el a dokumentációt.</p>
-                    <a href="./documentation.pdf" class="btn btn-primary">Dokumentáció</a>
-                </div>
-            </div>
-
     <?php include_once "Includes/footer.inc.php"; ?>
 </body>
 </html>
