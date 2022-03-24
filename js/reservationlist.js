@@ -31,8 +31,8 @@ function tabla(adatok){
 
         if(ma >= kezdodatum && ma <= vegedatum)
             sz+='<span style="color: green">AKTÍV</span>';
-        //if(kezdodatum>ma)
-            //sz+='<span style="color: yellow">JÖVŐBELI</span>';
+        else if(kezdodatum>ma)
+            sz+='<span style="color: blue">JÖVŐBELI</span>';
         else
             sz+='<span style="color: red">LEJÁRT</span>';
     }

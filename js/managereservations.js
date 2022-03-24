@@ -21,7 +21,7 @@ function findReservation() {
     let adatok;
     fetch('routes.php?action=findReservation&id='+id+'')
         .then(x => x.json())
-        .then(y => listReservation(y))
+        .then(y => listReservation(y));
 }
 
 function listReservation(adatok){
@@ -54,9 +54,14 @@ function listReservation(adatok){
             ma.setHours(0,0,0,0);
 
             if(ma >= kezdodatum && ma <= vegedatum)
-                sz+='AKTÍV';
+                sz+='<span style="color: green">AKTÍV</span>';
+            else if(kezdodatum>ma)
+                sz+='<span style="color: blue">JÖVŐBELI</span>';
             else
-                sz+='INAKTÍV';        sz+='</td>';
+                sz+='<span style="color: red">LEJÁRT</span>';       
+
+
+            sz+='</td>';
             sz+='<td>';
             sz+='<a href="routes.php?action=delReservation&id='+elem.reservations_id+'"><button type="button" class="btn btn-outline-danger btn-sm" style="width: 100px;">Foglalás törlése</button></a>';
             sz+='</td>';
